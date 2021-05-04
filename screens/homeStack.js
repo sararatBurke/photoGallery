@@ -43,8 +43,10 @@ const Drawer = createDrawerNavigator();
 
 function MyDrawer() {
   return (
-    <Drawer.Navigator drawerStyle={{backgroundColor: '#fff',
-    width: 260}} drawerContent={props => <CustomDrawerContent {...props} />}>
+    <Drawer.Navigator 
+    drawerPosition="right"
+    drawerStyle={{backgroundColor: '#fff', width: 260}} 
+    drawerContent={props => <CustomDrawerContent {...props} />}>
       <Drawer.Screen name="Home" component={Home} />
       <Drawer.Screen name="Gallery" component={Gallery} />
     </Drawer.Navigator>
