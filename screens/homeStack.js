@@ -8,6 +8,7 @@ import {
   DrawerItemList,
   DrawerItem,
 } from '@react-navigation/drawer';
+import DrawerContent from '../screens/drawerContent';
 
 function Home({ navigation }) {
   return (
@@ -46,7 +47,7 @@ function MyDrawer() {
     <Drawer.Navigator 
     drawerPosition="right"
     drawerStyle={{backgroundColor: '#fff', width: 260}} 
-    drawerContent={props => <CustomDrawerContent {...props} />}>
+    drawerContent={props => <DrawerContent {...props} />}>
       <Drawer.Screen name="Home" component={Home} />
       <Drawer.Screen name="Gallery" component={Gallery} />
     </Drawer.Navigator>
