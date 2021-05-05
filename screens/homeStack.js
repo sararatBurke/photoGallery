@@ -8,13 +8,15 @@ import {
   DrawerItemList,
   DrawerItem,
 } from '@react-navigation/drawer';
-import DrawerContent from '../screens/drawerContent';
+import { Ionicons } from '@expo/vector-icons';
+
+//import DrawerContent from '../screens/drawerContent';
 
 function Home({ navigation }) {
   return (
     <View style={styles.container}>
       <Text style={styles.navText}>Home Screen</Text>
-      <Text style={styles.navText} title="Toggle" onPress={() => navigation.toggleDrawer()}>Toggle</Text>
+      <Ionicons name="menu" size={32} color="#000" style={styles.closeIcon} onPress={() => navigation.toggleDrawer()} />
     </View>
   );
 }
@@ -23,7 +25,7 @@ function Gallery({ navigation }) {
   return (
     <View style={styles.container}>
       <Text style={styles.navText}>Gallery Screen</Text>
-      <Text style={styles.navText} title="Toggle" onPress={() => navigation.toggleDrawer()}>Toggle</Text>
+      <Ionicons name="menu" size={32} color="#000" style={styles.closeIcon} onPress={() => navigation.toggleDrawer()} />
     </View>
   );
 }
@@ -32,10 +34,17 @@ function CustomDrawerContent(props) {
   return (
     <DrawerContentScrollView {...props}>
       <DrawerItemList {...props} />
-      <DrawerItem
-        label="Toggle"
+      <Ionicons name="close" size={32} color="#000" style={styles.closeIcon} onPress={() => props.navigation.closeDrawer()}/>
+      {/* <DrawerItem
+        label="Close drawer"
+        onPress={() => props.navigation.closeDrawer()}
+      /> */}
+      
+      {/* <DrawerItem
+        label="Toggle drawer"
         onPress={() => props.navigation.toggleDrawer()}
-      />
+      /> */}
+      
     </DrawerContentScrollView>
   );
 }
@@ -47,7 +56,8 @@ function MyDrawer() {
     <Drawer.Navigator 
     drawerPosition="right"
     drawerStyle={{backgroundColor: '#fff', width: 260}} 
-    drawerContent={props => <DrawerContent {...props} />}>
+    drawerContent={props => <CustomDrawerContent {...props} />}>
+      
       <Drawer.Screen name="Home" component={Home} />
       <Drawer.Screen name="Gallery" component={Gallery} />
     </Drawer.Navigator>
@@ -73,7 +83,9 @@ const styles = ScaledSheet.create({
     fontFamily: 'JosefinSans',
     fontSize: 35
   },
-  drawFont:{
-    
-  }
+  closeIcon: {
+    position: 'absolute',
+    right: 16,
+    top: 60
+}
 })
