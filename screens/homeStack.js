@@ -10,13 +10,15 @@ import {
 } from '@react-navigation/drawer';
 import { Ionicons } from '@expo/vector-icons';
 
-//import DrawerContent from '../screens/drawerContent';
+import Home from '../screens/home';
 
-function Home({ navigation }) {
+
+function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text style={styles.navText}>Home Screen</Text>
+      <Text style={styles.photon}>Photon</Text>
       <Ionicons name="menu" size={32} color="#000" style={styles.closeIcon} onPress={() => navigation.toggleDrawer()} />
+      <Home />
     </View>
   );
 }
@@ -24,6 +26,7 @@ function Home({ navigation }) {
 function Gallery({ navigation }) {
   return (
     <View style={styles.container}>
+      <Text style={styles.photon}>Photon</Text>
       <Text style={styles.navText}>Gallery Screen</Text>
       <Ionicons name="menu" size={32} color="#000" style={styles.closeIcon} onPress={() => navigation.toggleDrawer()} />
     </View>
@@ -33,8 +36,11 @@ function Gallery({ navigation }) {
 function CustomDrawerContent(props) {
   return (
     <DrawerContentScrollView {...props}>
-      <DrawerItemList {...props} />
       <Ionicons name="close" size={32} color="#000" style={styles.closeIcon} onPress={() => props.navigation.closeDrawer()}/>
+      <View>
+      <DrawerItemList {...props} />
+      </View>
+      
       {/* <DrawerItem
         label="Close drawer"
         onPress={() => props.navigation.closeDrawer()}
@@ -57,8 +63,7 @@ function MyDrawer() {
     drawerPosition="right"
     drawerStyle={{backgroundColor: '#fff', width: 260}} 
     drawerContent={props => <CustomDrawerContent {...props} />}>
-      
-      <Drawer.Screen name="Home" component={Home} />
+      <Drawer.Screen name="Home" component={HomeScreen} />
       <Drawer.Screen name="Gallery" component={Gallery} />
     </Drawer.Navigator>
   );
@@ -75,17 +80,36 @@ export default function App() {
 const styles = ScaledSheet.create({
   container:{
     flex: 1,
-    alignItems: 'center', 
-    justifyContent: 'center'
+    
+    // justifyContent: 'center'
 
   },
-  navText: {
+  photon:{
+    fontFamily: 'JosefinSans-Medium',
+    fontSize: 35,
+    left: 15,
+    marginTop: 50
+
+  },
+  headTitle: {
     fontFamily: 'JosefinSans',
-    fontSize: 35
+    fontSize: 35,
+    alignItems: 'center', 
+    justifyContent: 'center'
   },
   closeIcon: {
     position: 'absolute',
     right: 16,
-    top: 60
+    top: 50
 }
 })
+
+
+// inline
+// headerStyle: {
+// backgroundColor: '#f4511e', //Set Header color
+// },
+// headerTintColor: '#fff', //Set Header text color
+// headerTitleStyle: {
+// fontWeight: 'bold', //Set Header text style
+// },
