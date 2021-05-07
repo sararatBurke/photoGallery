@@ -15,6 +15,7 @@ export default function App() {
     <View style={styles.homeContainer}>
         <View style={styles.natureHeader}>
             <Text style={{fontFamily: 'JosefinSans-Medium', fontSize: 40,}}>Nature Gallery</Text>
+            <Text style={{width:100, borderTopWidth: 2, borderTopColor: '#000', marginBottom: 10}}></Text>
         </View>
         <View style={styles.gallery}>
             <ScrollView>
@@ -42,7 +43,7 @@ export default function App() {
 const styles = ScaledSheet.create({
     homeContainer:{
         flex: 1,
-        padding: 15
+        // padding: 15
     },
     natureHeader:{
         flex:0.1,
