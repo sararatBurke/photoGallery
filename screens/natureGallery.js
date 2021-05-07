@@ -32,7 +32,7 @@ export default function App() {
 
         <View style={{marginTop: 10}}>
             <Text 
-            style={{fontFamily: 'JosefinSans-Medium', fontSize: 16, lineHeight: 25}}>Copyright ©2021 All rights reserved | This template is made with ♡ by 
+            style={{fontFamily: 'JosefinSans-Medium', fontSize: 16, lineHeight: 25, textAlign: 'center'}}>Copyright ©2021 All rights reserved | This template is made with ♡ by 
             <Text style={{color: '#20c997'}}> Colorlib</Text>
             </Text>
         </View>
