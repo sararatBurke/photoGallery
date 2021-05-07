@@ -13,21 +13,20 @@ export default function App() {
 
   return (
     <View style={styles.homeContainer}>
+        <ScrollView>
         <View style={styles.natureHeader}>
             <Text style={{fontFamily: 'JosefinSans-Medium', fontSize: 40,}}>Nature Gallery</Text>
             <Text style={{width:100, borderTopWidth: 2, borderTopColor: '#000', marginBottom: 10}}></Text>
         </View>
         <View style={styles.gallery}>
-            <ScrollView>
-                {
-                    images.map( (image, index) => (
-                        <Image 
-                            key={index}
-                            source={{uri: image}}
-                            style={{width:400, height:400, resizeMode: 'contain', marginVertical: -20}} />
-                    ))
-                }
-            </ScrollView>
+            {
+                images.map( (image, index) => (
+                    <Image 
+                        key={index}
+                        source={{uri: image}}
+                        style={{width:400, height:400, resizeMode: 'contain', marginVertical: -20}} />
+                ))
+            }
         </View>
 
         <View style={{marginTop: 10}}>
@@ -36,6 +35,7 @@ export default function App() {
             <Text style={{color: '#20c997'}}> Colorlib</Text>
             </Text>
         </View>
+        </ScrollView>
     </View>
   );
 }
