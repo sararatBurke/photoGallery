@@ -106,7 +106,16 @@ function MyDrawer() {
   return (
     <Drawer.Navigator 
     drawerPosition="right"
-    drawerStyle={{backgroundColor: '#fff', width: 260}} 
+    drawerStyle={{ width: 260 }} 
+    drawerContentOptions={{
+      inactiveTintColor: '#000',
+      activeTintColor: '#20c997',
+      activeBackgroundColor: '#fff',
+      itemStyle: { marginTop: 22 },
+      labelStyle:{
+        fontFamily:'JosefinSans-Medium',
+        fontSize: 22,}  
+    }}
     drawerContent={props => <CustomDrawerContent {...props} />}>
       <Drawer.Screen name="Home" component={HomeScreen} />
       <Drawer.Screen name="Gallery" component={Gallery} />
