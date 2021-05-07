@@ -11,16 +11,16 @@ export default function App() {
             source={{
             uri: 'https://images.unsplash.com/photo-1540206395-68808572332f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bmF0dXJlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60',
             }}>
-            <View style={styles.content}>
-                <Text style={styles.imageText}>Nature</Text>
-                <Text style={styles.imageButton}>MORE PHOTOS</Text>
-            </View>
-        </ImageBackground>
+                <View style={styles.content}>
+                    <Text style={styles.imageText}>Nature</Text>
+                    <Text style={styles.imageButton}>MORE PHOTOS</Text>
+                </View>
+            </ImageBackground>
         </View>
         <View style={{marginTop: 10}}>
             <Text 
             style={{fontFamily: 'JosefinSans-Medium', fontSize: 16, lineHeight: 25}}>Copyright ©2021 All rights reserved | This template is made with ♡ by 
-            <Text style={{color: '#20c997'}}>Colorlib</Text>
+            <Text style={{color: '#20c997'}}> Colorlib</Text>
             </Text>
         </View>
     </View>
