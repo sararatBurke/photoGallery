@@ -16,8 +16,13 @@ export default function App() {
                 <Text style={styles.imageButton}>MORE PHOTOS</Text>
             </View>
         </ImageBackground>
-      </View>
-        <Text style={{fontFamily: 'JosefinSans-Medium', fontSize: 16, lineHeight: 25}}>Copyright ©2021 All rights reserved | This template is made with ♡ by <Text style={{color: '#20c997'}}>Colorlib</Text></Text>
+        </View>
+        <View style={{marginTop: 10}}>
+            <Text 
+            style={{fontFamily: 'JosefinSans-Medium', fontSize: 16, lineHeight: 25}}>Copyright ©2021 All rights reserved | This template is made with ♡ by 
+            <Text style={{color: '#20c997'}}>Colorlib</Text>
+            </Text>
+        </View>
     </View>
   );
 }
