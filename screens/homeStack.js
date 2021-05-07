@@ -111,7 +111,7 @@ function MyDrawer() {
       inactiveTintColor: '#000',
       activeTintColor: '#20c997',
       activeBackgroundColor: '#fff',
-      itemStyle: { marginTop: 22 },
+      itemStyle: { marginTop: 20, marginLeft:30, width: 150 },
       labelStyle:{
         fontFamily:'JosefinSans-Medium',
         fontSize: 22,}  
@@ -146,7 +146,8 @@ const styles = ScaledSheet.create({
   closeIcon: {
     position: 'absolute',
     right: 16,
-    top: 50
+    top: 50,
+    zIndex: 1
   },
 
   headTitle: {
