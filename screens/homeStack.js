@@ -12,6 +12,9 @@ import { Ionicons } from '@expo/vector-icons';
 
 import Home from './home';
 import NatureGallery from './natureGallery';
+import Services from './services';
+import About from './about';
+import Contact from './contact';
 
 
 function HomeScreen({ navigation }) {
@@ -37,6 +40,43 @@ function Gallery({ navigation }) {
     </View>
   );
 }
+
+function ServiceScreen({ navigation }) {
+  return (
+    <View style={styles.container}>
+      <View style={{paddingVertical: 50, flexDirection: 'row', justifyContent: 'space-between'}}>
+        <Text style={styles.photon}>Photon</Text>
+        <Ionicons name="menu" size={32} color="#000" onPress={() => navigation.toggleDrawer()} />
+      </View>
+      <Services />
+    </View>
+  );
+}
+
+function AboutScreen({ navigation }) {
+  return (
+    <View style={styles.container}>
+      <View style={{paddingVertical: 50, flexDirection: 'row', justifyContent: 'space-between'}}>
+        <Text style={styles.photon}>Photon</Text>
+        <Ionicons name="menu" size={32} color="#000" onPress={() => navigation.toggleDrawer()} />
+      </View>
+      <About />
+    </View>
+  );
+}
+
+function ContactScreen({ navigation }) {
+  return (
+    <View style={styles.container}>
+      <View style={{paddingVertical: 50, flexDirection: 'row', justifyContent: 'space-between'}}>
+        <Text style={styles.photon}>Photon</Text>
+        <Ionicons name="menu" size={32} color="#000" onPress={() => navigation.toggleDrawer()} />
+      </View>
+      <Contact />
+    </View>
+  );
+}
+
 
 function CustomDrawerContent(props) {
   return (
@@ -70,6 +110,9 @@ function MyDrawer() {
     drawerContent={props => <CustomDrawerContent {...props} />}>
       <Drawer.Screen name="Home" component={HomeScreen} />
       <Drawer.Screen name="Gallery" component={Gallery} />
+      <Drawer.Screen name="Services" component={ServiceScreen} />
+      <Drawer.Screen name="About" component={AboutScreen} />
+      <Drawer.Screen name="Contact" component={ContactScreen} />
     </Drawer.Navigator>
   );
 }
@@ -85,10 +128,7 @@ export default function App() {
 const styles = ScaledSheet.create({
   container:{
     flex: 1,
-    padding: 15
-    
-    // justifyContent: 'center'
-
+    padding: 15,
   },
   photon:{
     fontFamily: 'JosefinSans-Medium',
