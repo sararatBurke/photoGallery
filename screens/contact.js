@@ -12,7 +12,7 @@ export default function App() {
   return (
     <View style={styles.homeContainer}>
     <ScrollView>
-        <View style={styles.natureHeader}>
+        <View style={styles.pageHeader}>
             <Text style={{fontFamily: 'JosefinSans-Medium', fontSize: 40,}}>Contact Us</Text>
             <Text style={{width:100, borderTopWidth: 2, borderTopColor: '#000', marginBottom: 10}}></Text>
         </View>
@@ -83,7 +83,7 @@ const styles = ScaledSheet.create({
         flex: 1,
         // padding: 15
     },
-    natureHeader:{
+    pageHeader:{
         flex:0.1,
         justifyContent: 'center',
         alignItems: 'center',
