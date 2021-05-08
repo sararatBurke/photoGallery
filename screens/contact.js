@@ -18,7 +18,7 @@ export default function App() {
         </View>
   
     {/* ---------------------Input section----------------- */}
-        <SafeAreaView>
+    <View style={styles.inputContain}>
         <Text style={styles.inputTitle}>First Name</Text>
         <TextInput
             style={styles.input}
@@ -38,7 +38,7 @@ export default function App() {
             style={styles.input}
             onChangeText={onChangeEmail}
             value={email}
-            placeholder="Subject"
+            placeholder="Email"
         />
         <Text style={styles.inputTitle}>Subject</Text>
         <TextInput
@@ -49,15 +49,19 @@ export default function App() {
         />
         <Text style={styles.inputTitle}>Message</Text>
         <TextInput
-            style={styles.input}
+            style={styles.inputMessage}
+            multiline={true}
+            numberOfLines={4}
             onChangeText={onChangeMessage}
             value={message}
-            placeholder="Subject"
+            placeholder="Message"
         />
         <Text style={styles.submit}>Send Message</Text>
-        </SafeAreaView>
+   
+        
 
     {/* ---------------------Contact information----------------- */}
+      
         <View style={{marginVertical: 30}}>
             <Text style={styles.contactTitle}>Address</Text>
             <Text style={{fontFamily: 'JosefinSans-SemiBold', fontSize: 18, color: '#212529', marginVertical: 10}}>111 Clark St #9, Boston, Massachusetts, USA</Text>
@@ -66,13 +70,14 @@ export default function App() {
             <Text style={styles.contactTitle}>Email Address</Text>
             <Text style={{fontFamily: 'JosefinSans-SemiBold', fontSize: 18, color: '#45C997', marginVertical: 10}}>youremail@domain.com</Text>
         </View>
- 
+    {/* --------------------- Footer --------------------*/}
         <View style={{marginVertical: 20}}>
             <Text 
             style={{fontFamily: 'JosefinSans-Medium', fontSize: 16, lineHeight: 25, textAlign: 'center'}}>Copyright ©2021 All rights reserved | This template is made with ♡ by 
             <Text style={{color: '#45C997'}}> Colorlib</Text>
             </Text>
         </View>
+    </View>
     </ScrollView>
     </View>
   );
@@ -81,7 +86,8 @@ export default function App() {
 const styles = ScaledSheet.create({
     homeContainer:{
         flex: 1,
-        // padding: 15
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     pageHeader:{
         flex:0.1,
@@ -89,12 +95,23 @@ const styles = ScaledSheet.create({
         alignItems: 'center',
     },
 ///////Input section style
+    inputContain:{
+        width: '380@mvs0.1'
+    },
     inputTitle: {
         fontFamily: 'JosefinSans-SemiBold',
         fontSize: 18,  
         marginTop: 10
     },
     input: {
+        padding: 10,
+        borderWidth: 1,
+        borderColor: '#999999',
+        marginVertical: 10
+    },
+    inputMessage:{
+        height: 150,
+        justifyContent: "flex-start",
         padding: 10,
         borderWidth: 1,
         borderColor: '#999999',

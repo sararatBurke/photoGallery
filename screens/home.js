@@ -68,9 +68,10 @@ return (
             <WebView source={{html: '<iframe width="100%" height="100%" src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'}}/>
             </View>
 
-            <Pressable style={styles.buttonClose}
-                onPress={() => setModalVisible(!modalVisible)}>
-                <Text style={styles.textStyle}>CLOSE</Text>
+            <Pressable 
+              style={styles.buttonClose}
+              onPress={() => setModalVisible(!modalVisible)}>
+                <Text style={styles.buttonText}>CLOSE</Text>
             </Pressable>
 
         </View>
@@ -86,6 +87,7 @@ return (
     
         </View> : null
     }
+    {/* --------------------- Footer --------------------*/}
         <View style={{marginTop: 50}}>
             <Text 
             style={{fontFamily: 'JosefinSans-Medium', fontSize: 16, lineHeight: 25}}>Copyright ©2021 All rights reserved | This template is made with ♡ by 
@@ -119,15 +121,21 @@ const styles = ScaledSheet.create({
   imageText:{
     fontFamily: 'JosefinSans-Bold',
     fontSize: 32,
-    color:'#fff'
+    color:'#fff',
+    justifyContent: "center",
   },
   buttonClose: {
-    borderRadius: 5,
-    padding: 10,
+    position: 'relative',
     elevation: 2,
     margin:0,
-    alignItems: 'center',
-    backgroundColor: "#fff",
+    
+  },
+  buttonText:{
+    color: '#fff',
+    borderRadius: 5,
+    borderColor: '#fff',
+    borderWidth: 2,
+    padding: 10,
   },
   videoView: {
     flexDirection: "column",
