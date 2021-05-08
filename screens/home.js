@@ -30,7 +30,6 @@ export default function App() {
 const styles = ScaledSheet.create({
     homeContainer:{
         flex: 1,
-        // padding: 15
     },
     image:{
         flex:1,

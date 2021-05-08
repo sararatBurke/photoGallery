@@ -85,7 +85,6 @@ export default function App() {
 const styles = ScaledSheet.create({
     homeContainer:{
         flex: 1,
-        // padding: 15
     },
     pageHeader:{
         flex:0.1,
