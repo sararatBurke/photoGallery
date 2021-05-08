@@ -85,17 +85,6 @@ function CustomDrawerContent(props) {
       <View>
       <DrawerItemList {...props} />
       </View>
-      
-      {/* <DrawerItem
-        label="Close drawer"
-        onPress={() => props.navigation.closeDrawer()}
-      /> */}
-      
-      {/* <DrawerItem
-        label="Toggle drawer"
-        onPress={() => props.navigation.toggleDrawer()}
-      /> */}
-      
     </DrawerContentScrollView>
   );
 }
@@ -159,13 +148,3 @@ const styles = ScaledSheet.create({
   },
  
 })
-
-
-// inline
-// headerStyle: {
-// backgroundColor: '#f4511e', //Set Header color
-// },
-// headerTintColor: '#fff', //Set Header text color
-// headerTitleStyle: {
-// fontWeight: 'bold', //Set Header text style
-// },
