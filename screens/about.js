@@ -3,6 +3,7 @@ import { ScaledSheet } from 'react-native-size-matters';
 import { View, Text, ScrollView } from 'react-native';
 import { Avatar } from 'react-native-elements';
 import { Ionicons } from '@expo/vector-icons';
+import Icon from "react-native-vector-icons/Zocial";
 
 export default function App() {
   return (
@@ -34,7 +35,7 @@ export default function App() {
             <View style={{flexDirection: 'row', width: 160, justifyContent: 'space-around'}}>
             <Ionicons name="logo-twitter" size={20} color="#20c997" />
             <Ionicons name="logo-instagram" size={20} color="#20c997" />
-            <Ionicons name="logo-facebook" size={20} color="#20c997" />
+            <Icon name="facebook" size={20} color="#20c997" />
             </View>
         </View>
 
@@ -44,13 +45,13 @@ export default function App() {
                 rounded
                 size={200}
                 title="SB"
-                source={{uri:'https://avatars.githubusercontent.com/u/51972361?v=4'}}/>
-            <Text style={styles.memberTitle}>Nuanjan Schluntz</Text>
+                source={{uri:'https://atlas.illinois.edu/sites/default/files/styles/directory_profile_card/public/profile-default.png.jpg?itok=izyvgYNL'}}/>
+            <Text style={styles.memberTitle}>Fname Lname</Text>
             <Text style={styles.memberDiscription}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ab quas facilis obcaecati non ea, est odit repellat distinctio incidunt, quia aliquam eveniet quod deleniti impedit sapiente atque tenetur porro?</Text>
             <View style={{flexDirection: 'row', width: 160, justifyContent: 'space-around'}}>
             <Ionicons name="logo-twitter" size={20} color="#20c997" />
             <Ionicons name="logo-instagram" size={20} color="#20c997" />
-            <Ionicons name="logo-facebook" size={20} color="#20c997" />
+            <Icon name="facebook" size={20} color="#20c997" />
             </View>
         </View>
 
@@ -67,7 +68,7 @@ export default function App() {
             <View style={{flexDirection: 'row', width: 160, justifyContent: 'space-around'}}>
             <Ionicons name="logo-twitter" size={20} color="#20c997" />
             <Ionicons name="logo-instagram" size={20} color="#20c997" />
-            <Ionicons name="logo-facebook" size={20} color="#20c997" />
+            <Icon name="facebook" size={20} color="#20c997" />
             </View>
         </View>
     {/* --------------------- Footer --------------------*/}
