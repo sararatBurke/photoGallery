@@ -76,8 +76,9 @@ return (
 
         </View>
     </Modal>
-    {mode === "portrait" ? 
-        <View style={mode=== 'portrait'? styles.imagecontainer : styles.imagecontainer2}>
+{/* ----------------------------------- Image contain video link -------------------------------------*/}
+  {mode === "portrait" ? 
+      <View style={mode=== 'portrait'? styles.imagecontainer : styles.imagecontainer2}>
         <ScrollView
           horizontal={true}
           showsHorizontalScrollIndicator={false}>
@@ -90,9 +91,8 @@ return (
                 <Icon name="ios-play-circle-outline" color="white" size={50} onPress={() => setModalVisible(true)} />
             </ImageBackground>
         </ScrollView>
-    
-        </View> : null}
-    {/* --------------------- Footer --------------------*/}
+      </View> : null}
+{/* -----------------------------------  Footer -------------------------------------*/}
         <View style={{marginTop: 50}}>
             <Text 
             style={{fontFamily: 'JosefinSans-Medium', fontSize: 16, lineHeight: 25}}>Copyright ©2021 All rights reserved | This template is made with ♡ by 
@@ -108,7 +108,7 @@ const styles = ScaledSheet.create({
     alignItems: "center",
     flexDirection: "column",
   },
-
+////////------------------ Portrait view ------------------////////
   imagecontainer: {
     flex: 0.9,
     flexDirection: 'row',
@@ -116,7 +116,7 @@ const styles = ScaledSheet.create({
     width: '100%',
     marginTop: 10,
   },
-
+///// Nature gallery image
   leftImage: {
     marginRight: 25,
     flex: 1,
@@ -125,6 +125,7 @@ const styles = ScaledSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+///// Portrad gallery image
   rightImage:{
     flex: 1,
     paddingHorizontal:145,
@@ -132,18 +133,18 @@ const styles = ScaledSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-
-  imageText:{
+///// Content inside image 
+imageText:{
     fontFamily: 'JosefinSans-Bold',
     fontSize: 32,
     color:'#fff',
     justifyContent: "center",
   },
+///// Video buttons
   buttonClose: {
     position: 'relative',
     elevation: 2,
-    margin:0,
-    
+    margin:0, 
   },
   buttonText:{
     color: '#fff',
@@ -152,6 +153,7 @@ const styles = ScaledSheet.create({
     borderWidth: 2,
     padding: 10,
   },
+///// Video style
   videoView: {
     flexDirection: "column",
     flex: 1,
@@ -167,7 +169,7 @@ const styles = ScaledSheet.create({
     backgroundColor: '#000',
   },
 
-/////// Landscape view
+////////------------------ Landscape view ------------------////////
   imagecontainer2: {
     width: '100%',
     flexDirection: 'row',
@@ -180,9 +182,9 @@ const styles = ScaledSheet.create({
     width: '165@s',
     resizeMode: 'stretch',
     justifyContent: "center",
-    alignItems: "center",
-              
+    alignItems: "center",            
   },
+///// Nature gallery image
   leftImage2: {
     marginRight: 25,
     flex: 1,
@@ -191,6 +193,7 @@ const styles = ScaledSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+///// Portrad gallery image
   rightImage2:{
     flex: 1,
     width: '165@s',
@@ -198,6 +201,4 @@ const styles = ScaledSheet.create({
     justifyContent: "center",
     alignItems: "center",
   }
-
 });
-// export default App;
