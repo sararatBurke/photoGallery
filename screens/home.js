@@ -78,25 +78,20 @@ return (
     </Modal>
     {mode === "portrait" ? 
         <View style={mode=== 'portrait'? styles.imagecontainer : styles.imagecontainer2}>
-          <ScrollView
+        <ScrollView
           horizontal={true}
           showsHorizontalScrollIndicator={false}>
-        <ImageBackground source={image} style={mode=== 'portrait'? styles.image : styles.image2, styles.leftImage}>
-            {/* <View style={styles.content}> */}
+            <ImageBackground source={image} style={mode=== 'portrait'? styles.leftImage : styles.leftImage2}>
                 <Text style={styles.imageText}>Nature</Text>
                 <Icon name="ios-play-circle-outline" color="white" size={50} onPress={() => setModalVisible(true)} />
-            {/* </View> */}
-        </ImageBackground>
-        <ImageBackground source={image2} style={mode=== 'portrait'? styles.image : styles.image2, styles.rightImage}>
-            {/* <View style={styles.content}> */}
+            </ImageBackground>
+            <ImageBackground source={image2} style={mode=== 'portrait'? styles.rightImage : styles.rightImage2}>
                 <Text style={styles.imageText}>Portrait</Text>
                 <Icon name="ios-play-circle-outline" color="white" size={50} onPress={() => setModalVisible(true)} />
-            {/* </View> */}
-        </ImageBackground>
+            </ImageBackground>
         </ScrollView>
     
-        </View> : null
-    }
+        </View> : null}
     {/* --------------------- Footer --------------------*/}
         <View style={{marginTop: 50}}>
             <Text 
@@ -115,19 +110,29 @@ const styles = ScaledSheet.create({
   },
 
   imagecontainer: {
-    justifyContent: "center",
-    width: "100%",
     flex: 0.9,
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    width: '100%',
     marginTop: 10,
   },
 
-  image: {
+  leftImage: {
+    marginRight: 25,
     flex: 1,
+    paddingHorizontal:145,
     resizeMode: 'stretch',
     justifyContent: "center",
     alignItems: "center",
-              
   },
+  rightImage:{
+    flex: 1,
+    paddingHorizontal:145,
+    resizeMode: 'stretch',
+    justifyContent: "center",
+    alignItems: "center",
+  },
+
   imageText:{
     fontFamily: 'JosefinSans-Bold',
     fontSize: 32,
@@ -178,7 +183,7 @@ const styles = ScaledSheet.create({
     alignItems: "center",
               
   },
-  leftImage: {
+  leftImage2: {
     marginRight: 25,
     flex: 1,
     width: '165@s',
@@ -186,7 +191,7 @@ const styles = ScaledSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  rightImage:{
+  rightImage2:{
     flex: 1,
     width: '165@s',
     resizeMode: 'stretch',
