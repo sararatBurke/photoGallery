@@ -3,7 +3,6 @@ import { ScaledSheet } from 'react-native-size-matters';
 import { View, Text,  Image, ScrollView } from 'react-native';
 
 export default function App() {
-
   return (
     <View style={styles.homeContainer}>
         <ScrollView>
@@ -83,11 +82,12 @@ const styles = ScaledSheet.create({
         alignItems: 'center',
     },
     serviceType: {
+        width: 390,
         justifyContent: 'center', 
         alignItems: 'center',
         backgroundColor: 'rgb(245,245,250)',
-        padding: 10,
-        marginVertical: 15
+        padding: 15,
+        marginVertical: 15,  
     },
     contentTitle:{
         fontFamily: 'JosefinSans-Bold', 
@@ -106,7 +106,4 @@ const styles = ScaledSheet.create({
         color: '#20c997',
         marginVertical: 20
     },
-
-   
-
 })
