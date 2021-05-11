@@ -6,7 +6,8 @@ import {
     SafeAreaView,
     Modal, 
     Pressable,
-    Dimensions
+    Dimensions,
+    ScrollView
   } from "react-native";
   import { ScaledSheet } from "react-native-size-matters";
   import { WebView } from "react-native-webview";
@@ -21,9 +22,8 @@ export default function App() {
     const [modalVisible, setModalVisible] = useState(false);
     const [playing, setPlaying] = useState(false);
 
-    const image = { 
-        uri: 'https://images.unsplash.com/photo-1540206395-68808572332f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bmF0dXJlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60',
-    };
+    const image = { uri: 'https://images.unsplash.com/photo-1540206395-68808572332f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bmF0dXJlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60',};
+    const image2 = { uri: 'https://images.unsplash.com/photo-1518834107812-67b0b7c58434?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=375&q=80',};
 
     const modeMaker = () => {
         if (dimensions.screen.width > dimensions.screen.height) {
@@ -77,13 +77,23 @@ return (
         </View>
     </Modal>
     {mode === "portrait" ? 
-        <View style={styles.imagecontainer}>
-        <ImageBackground source={image} style={styles.image}>
+        <View style={mode=== 'portrait'? styles.imagecontainer : styles.imagecontainer2}>
+          <ScrollView
+          horizontal={true}
+          showsHorizontalScrollIndicator={false}>
+        <ImageBackground source={image} style={mode=== 'portrait'? styles.image : styles.image2, styles.leftImage}>
             {/* <View style={styles.content}> */}
                 <Text style={styles.imageText}>Nature</Text>
                 <Icon name="ios-play-circle-outline" color="white" size={50} onPress={() => setModalVisible(true)} />
             {/* </View> */}
         </ImageBackground>
+        <ImageBackground source={image2} style={mode=== 'portrait'? styles.image : styles.image2, styles.rightImage}>
+            {/* <View style={styles.content}> */}
+                <Text style={styles.imageText}>Portrait</Text>
+                <Icon name="ios-play-circle-outline" color="white" size={50} onPress={() => setModalVisible(true)} />
+            {/* </View> */}
+        </ImageBackground>
+        </ScrollView>
     
         </View> : null
     }
@@ -151,6 +161,38 @@ const styles = ScaledSheet.create({
     width: "105%",
     backgroundColor: '#000',
   },
+
+/////// Landscape view
+  imagecontainer2: {
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    flex: 0.9,
+    marginTop: 10,
+  },
+  image2: {
+    flex: 1,
+    width: '165@s',
+    resizeMode: 'stretch',
+    justifyContent: "center",
+    alignItems: "center",
+              
+  },
+  leftImage: {
+    marginRight: 25,
+    flex: 1,
+    width: '165@s',
+    resizeMode: 'stretch',
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  rightImage:{
+    flex: 1,
+    width: '165@s',
+    resizeMode: 'stretch',
+    justifyContent: "center",
+    alignItems: "center",
+  }
 
 });
 // export default App;
