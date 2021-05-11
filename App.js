@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import * as Font from 'expo-font';
 import AppLoading from 'expo-app-loading';
 import HomeStack from './screens/homeStack';
+import DrawerContentScrollView from './screens/drawStackContainer';
 
 const getFonts = () => Font.loadAsync({
   'JosefinSans': require('./assets/Josefin_Sans/JosefinSans-Regular.ttf'),
