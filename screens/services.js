@@ -76,50 +76,50 @@ export default function App() {
             <Image
                 style={{width:54, resizeMode: 'contain', marginVertical: 20}}
                 source={require('../assets/images/camera.png')}/>
-            <Text style={mode === 'portrait'? styles.serviceTitle : serviceTitleTablet}>Camera</Text>
-            <Text style={mode === 'portrait'? styles.descriptPhone : descriptTablet}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum exercitationem quae id dolorum debitis.</Text>
-            <Text style={mode === 'portrait'? styles.pricePhone : priceTablet}>$29</Text>
+            <Text style={mode === 'portrait'? styles.serviceTitle : styles.serviceTitleTablet}>Camera</Text>
+            <Text style={mode === 'portrait'? styles.descriptPhone : styles.descriptTablet}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum exercitationem quae id dolorum debitis.</Text>
+            <Text style={mode === 'portrait'? styles.pricePhone : styles.priceTablet}>$29</Text>
         </View>
         <View style={styles.servicePhoneBg}>
             <Image
                 style={{width:54, resizeMode: 'contain', marginVertical: 20}}
                 source={require('../assets/images/wedding.png')}/>
-            <Text style={mode === 'portrait'? styles.serviceTitle : serviceTitleTablet}>Wedding Photography</Text>
-            <Text style={mode === 'portrait'? styles.descriptPhone : descriptTablet}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum exercitationem quae id dolorum debitis.</Text>
-            <Text style={mode === 'portrait'? styles.pricePhone : priceTablet}>$46</Text>
+            <Text style={mode === 'portrait'? styles.serviceTitle : styles.serviceTitleTablet}>Wedding Photography</Text>
+            <Text style={mode === 'portrait'? styles.descriptPhone : styles.descriptTablet}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum exercitationem quae id dolorum debitis.</Text>
+            <Text style={mode === 'portrait'? styles.pricePhone : styles.priceTablet}>$46</Text>
         </View>
         <View style={styles.servicePhoneBg}>
             <Image
                 style={{width:54, resizeMode: 'contain', marginVertical: 20}}
                 source={require('../assets/images/animal.png')}/>
-            <Text style={mode === 'portrait'? styles.serviceTitle : serviceTitleTablet}>Animal</Text>
-            <Text style={mode === 'portrait'? styles.descriptPhone : descriptTablet}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum exercitationem quae id dolorum debitis.</Text>
-            <Text style={mode === 'portrait'? styles.pricePhone : priceTablet}>$24</Text>
+            <Text style={mode === 'portrait'? styles.serviceTitle : styles.serviceTitleTablet}>Animal</Text>
+            <Text style={mode === 'portrait'? styles.descriptPhone : styles.descriptTablet}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum exercitationem quae id dolorum debitis.</Text>
+            <Text style={mode === 'portrait'? styles.pricePhone : styles.priceTablet}>$24</Text>
         </View>
 
         <View style={styles.servicePhoneBg}>
             <Image
                 style={{width:54, resizeMode: 'contain', marginVertical: 20}}
                 source={require('../assets/images/portrait.png')}/>
-            <Text style={mode === 'portrait'? styles.serviceTitle: serviceTitleTablet}>Portrait</Text>
-            <Text style={mode === 'portrait'? styles.descriptPhone : descriptTablet}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum exercitationem quae id dolorum debitis.</Text>
-            <Text style={mode === 'portrait'? styles.pricePhone : priceTablet}>$40</Text>
+            <Text style={mode === 'portrait'? styles.serviceTitle: styles.serviceTitleTablet}>Portrait</Text>
+            <Text style={mode === 'portrait'? styles.descriptPhone : styles.descriptTablet}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum exercitationem quae id dolorum debitis.</Text>
+            <Text style={mode === 'portrait'? styles.pricePhone : styles.priceTablet}>$40</Text>
         </View>
         <View style={styles.servicePhoneBg}>
             <Image
                 style={{width:40, resizeMode: 'contain', marginVertical: 20}}
                 source={require('../assets/images/travel.png')}/>
-            <Text style={mode === 'portrait'? styles.serviceTitle : serviceTitleTablet}>Travel</Text>
-            <Text style={mode === 'portrait'? styles.descriptPhone : descriptTablet}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum exercitationem quae id dolorum debitis.</Text>
-            <Text style={mode === 'portrait'? styles.pricePhone : priceTablet}>$35</Text>
+            <Text style={mode === 'portrait'? styles.serviceTitle : styles.serviceTitleTablet}>Travel</Text>
+            <Text style={mode === 'portrait'? styles.descriptPhone : styles.descriptTablet}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum exercitationem quae id dolorum debitis.</Text>
+            <Text style={mode === 'portrait'? styles.pricePhone : styles.priceTablet}>$35</Text>
         </View>
         <View style={styles.servicePhoneBg}>
             <Image
                 style={{width:54, resizeMode: 'contain', marginVertical: 20}}
                 source={require('../assets/images/video.png')}/>
-            <Text style={mode === 'portrait'? styles.serviceTitle : serviceTitleTablet}>Video Editing</Text>
-            <Text style={mode === 'portrait'? styles.descriptPhone : descriptTablet}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum exercitationem quae id dolorum debitis.</Text>
-            <Text style={mode === 'portrait'? styles.pricePhone : priceTablet}>$15</Text>
+            <Text style={mode === 'portrait'? styles.serviceTitle : styles.serviceTitleTablet}>Video Editing</Text>
+            <Text style={mode === 'portrait'? styles.descriptPhone : styles.descriptTablet}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum exercitationem quae id dolorum debitis.</Text>
+            <Text style={mode === 'portrait'? styles.pricePhone : styles.priceTablet}>$15</Text>
         </View>
         
         </View>
@@ -165,19 +165,19 @@ const styles = ScaledSheet.create({
     },
     serviceTitle:{
         fontFamily: 'JosefinSans-Medium', 
-        fontSize: '20@ms',
+        fontSize: '22@ms',
         marginVertical: 6
     },
     descriptPhone:{
         fontFamily: 'JosefinSans', 
         color: '#2e2e2e',
-        fontSize: '14@ms', 
+        fontSize: '15@ms', 
         lineHeight: '18@s',
         marginVertical: 10
     },
     pricePhone:{
         fontFamily: 'JosefinSans-Bold', 
-        fontSize: '15@ms', 
+        fontSize: '16@ms', 
         color: '#20c997',
         marginVertical: 20
     },
@@ -188,8 +188,9 @@ const styles = ScaledSheet.create({
     },
     footerText:{
         fontFamily: 'JosefinSans-Medium', 
-        fontSize: '10@vs', 
-        lineHeight: 25, 
+        fontSize: '12@ms', 
+        lineHeight: '18@ms', 
+        marginTop: '20@s'
         
     },
 ///// Tablet /////
@@ -205,7 +206,7 @@ const styles = ScaledSheet.create({
     descriptTablet:{
         fontFamily: 'JosefinSans', 
         color: '#2e2e2e',
-        fontSize: '8@s', 
+        fontSize: '10@s', 
         lineHeight: '15@s',
         marginVertical: 10
     },
@@ -222,8 +223,9 @@ const styles = ScaledSheet.create({
     },
     footerText2:{
         fontFamily: 'JosefinSans-Medium', 
-        fontSize: '8@s', 
-        lineHeight: 25, 
+        fontSize: '8@ms', 
+        lineHeight: '15@ms', 
+        marginTop: '20@s'
         
     },
 
