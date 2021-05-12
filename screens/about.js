@@ -9,6 +9,7 @@ export default function App() {
   return (
     <View style={styles.homeContainer}>
     <ScrollView>
+        <View style={{width:  400,}}>
         <View style={styles.pageHeader}>
             <Text style={{fontFamily: 'JosefinSans-Medium', fontSize: 40,}}>About Us</Text>
             <Text style={{width:100, borderTopWidth: 2, borderTopColor: '#000', marginBottom: 10}}></Text>
@@ -78,6 +79,7 @@ export default function App() {
             <Text style={{color: '#20c997'}}> Colorlib</Text>
             </Text>
         </View>
+        </View>
     </ScrollView>
     </View>
   );
@@ -86,6 +88,8 @@ export default function App() {
 const styles = ScaledSheet.create({
     homeContainer:{
         flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     pageHeader:{
         flex:0.1,
@@ -94,7 +98,7 @@ const styles = ScaledSheet.create({
     },
     aboutSubTitle:{
         fontFamily: 'JosefinSans-Medium',
-        fontSize: 30,  
+        fontSize: '25@ms',  
         color: '#4d4d4d',
         marginVertical: 15
 
@@ -102,22 +106,22 @@ const styles = ScaledSheet.create({
     pageDiscription:{
         fontFamily: 'JosefinSans-Medium',
         color: '#4d4d4d',
-        fontSize: 15, 
-        lineHeight: 25,
+        fontSize: '15@ms', 
+        lineHeight: '25@ms',
         marginVertical: 10
 
     },
     memberTitle:{
         fontFamily: 'JosefinSans-Medium',
-        fontSize: 30,  
+        fontSize: '25@ms',  
         marginVertical: 15
     },
     memberDiscription:{
         fontFamily: 'JosefinSans-Medium',
         color: '#4d4d4d',
-        fontSize: 15, 
+        fontSize: '13@ms',
+        lineHeight: '20@ms', 
         textAlign: 'center', 
-        lineHeight: 25,
         marginVertical: 10
     }
 
