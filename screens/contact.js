@@ -64,11 +64,11 @@ export default function App() {
       
         <View style={{marginVertical: 30}}>
             <Text style={styles.contactTitle}>Address</Text>
-            <Text style={{fontFamily: 'JosefinSans-SemiBold', fontSize: 18, color: '#212529', marginVertical: 10}}>111 Clark St #9, Boston, Massachusetts, USA</Text>
+            <Text style={styles.contactSubText}>111 Clark St #9, Boston, Massachusetts, USA</Text>
             <Text style={styles.contactTitle}>Phone</Text>
-            <Text style={{fontFamily: 'JosefinSans-SemiBold', fontSize: 18, color: '#45C997', marginVertical: 10}}>+1 999 999 9999</Text>
+            <Text style={styles.contactSubTextBLUE}>+1 999 999 9999</Text>
             <Text style={styles.contactTitle}>Email Address</Text>
-            <Text style={{fontFamily: 'JosefinSans-SemiBold', fontSize: 18, color: '#45C997', marginVertical: 10}}>youremail@domain.com</Text>
+            <Text style={styles.contactSubTextBLUE}>youremail@domain.com</Text>
         </View>
     {/* --------------------- Footer --------------------*/}
         <View style={{marginVertical: 20}}>
@@ -100,10 +100,11 @@ const styles = ScaledSheet.create({
     },
     inputTitle: {
         fontFamily: 'JosefinSans-SemiBold',
-        fontSize: 18,  
+        fontSize: '16@mvs',  
         marginTop: 10
     },
     input: {
+        fontSize: '12@mvs',  
         padding: 10,
         borderWidth: 1,
         borderColor: '#999999',
@@ -119,7 +120,7 @@ const styles = ScaledSheet.create({
     },
     submit: {
         fontFamily: 'JosefinSans-Bold',
-        fontSize: 17,
+        fontSize: '16@mvs0.1',
         color: '#fff',
         textAlign: 'center',
         padding: 15,
@@ -130,10 +131,25 @@ const styles = ScaledSheet.create({
 ///////Contact section style
     contactTitle:{
         fontFamily: 'JosefinSans-Bold',
-        fontSize: 18,
+        fontSize: '18@mvs',
         color: '#212529',
         marginTop: 20
-    }
+    },
+    contactSubText:{
+        fontFamily: 'JosefinSans-SemiBold', 
+        fontSize: '15@mvs', 
+        lineHeight: '20@ms',
+        color: '#212529', 
+        marginVertical: 10
+    },
+    contactSubTextBLUE:{
+        fontFamily: 'JosefinSans-SemiBold', 
+        fontSize: '15@mvs', 
+        lineHeight: '20@ms',
+        color: '#45C997', 
+        marginVertical: 10
+    },
+    
    
 
 })
