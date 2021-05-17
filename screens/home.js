@@ -24,6 +24,8 @@ export default function App() {
 
     const image = { uri: 'https://images.unsplash.com/photo-1540206395-68808572332f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bmF0dXJlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60',};
     const image2 = { uri: 'https://images.unsplash.com/photo-1518834107812-67b0b7c58434?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=375&q=80',};
+    const image3 = { uri: 'https://images.unsplash.com/photo-1543946207-39bd91e70ca7?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YW5pbWFsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60',};
+    const image4 = { uri: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHRyYXZlbHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60',};
 
     const modeMaker = () => {
         if (dimensions.screen.width > dimensions.screen.height) {
@@ -82,12 +84,20 @@ return (
         <ScrollView
           horizontal={true}
           showsHorizontalScrollIndicator={false}>
-            <ImageBackground source={image} style={mode=== 'portrait'? styles.leftImage : styles.leftImage2}>
+            <ImageBackground source={image} style={mode=== 'portrait'? styles.image1 : styles.leftImage2}>
                 <Text style={styles.imageText}>Nature</Text>
                 <Icon name="ios-play-circle-outline" color="white" size={50} onPress={() => setModalVisible(true)} />
             </ImageBackground>
-            <ImageBackground source={image2} style={mode=== 'portrait'? styles.rightImage : styles.rightImage2}>
+            <ImageBackground source={image2} style={mode=== 'portrait'? styles.image2 : styles.rightImage2}>
                 <Text style={styles.imageText}>Portrait</Text>
+                <Icon name="ios-play-circle-outline" color="white" size={50} onPress={() => setModalVisible(true)} />
+            </ImageBackground>
+            <ImageBackground source={image3} style={mode=== 'portrait'? styles.image3 : styles.leftImage2}>
+                <Text style={styles.imageText}>Animal</Text>
+                <Icon name="ios-play-circle-outline" color="white" size={50} onPress={() => setModalVisible(true)} />
+            </ImageBackground>
+            <ImageBackground source={image4} style={mode=== 'portrait'? styles.image4 : styles.rightImage2}>
+                <Text style={styles.imageText}>Travel</Text>
                 <Icon name="ios-play-circle-outline" color="white" size={50} onPress={() => setModalVisible(true)} />
             </ImageBackground>
         </ScrollView>
@@ -117,7 +127,7 @@ const styles = ScaledSheet.create({
     marginTop: 10,
   },
 ///// Nature gallery image
-  leftImage: {
+  image1: {
     marginRight: 25,
     flex: 1,
     paddingHorizontal:145,
@@ -125,10 +135,26 @@ const styles = ScaledSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-///// Portrad gallery image
-  rightImage:{
+  image2: {
+    marginRight: 25,
     flex: 1,
     paddingHorizontal:145,
+    resizeMode: 'stretch',
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  image3: {
+    flex: 1,
+    paddingHorizontal:145,
+    resizeMode: 'stretch',
+    justifyContent: "center",
+    alignItems: "center",
+  },
+///// Portrad gallery image
+  image4:{
+    flex: 1,
+    marginLeft: 25,
+    paddingHorizontal:165,
     resizeMode: 'stretch',
     justifyContent: "center",
     alignItems: "center",
@@ -176,13 +202,6 @@ imageText:{
     justifyContent: 'space-between',
     flex: 0.9,
     marginTop: 10,
-  },
-  image2: {
-    flex: 1,
-    width: '165@s',
-    resizeMode: 'stretch',
-    justifyContent: "center",
-    alignItems: "center",            
   },
 ///// Nature gallery image
   leftImage2: {
